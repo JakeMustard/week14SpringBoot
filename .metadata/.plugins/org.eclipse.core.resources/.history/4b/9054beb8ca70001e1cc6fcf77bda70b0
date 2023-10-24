@@ -1,0 +1,27 @@
+package com.promineotech.jeep.controller;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.http.ResponseEntity;
+
+import com.promineotech.jeep.controller.support.FetchJeepTestSupport;
+import com.promineotech.jeep.entity.JeepModel;
+@SpringBootTest(webEnvironment= WebEnvironment.RANDOM_PORT)
+
+public class FetchJeepTest extends FetchJeepTestSupport {
+
+	@Test
+	void testThatJeepAreReturnedWhenAValidModelAndTrimAreSupplied() {
+		
+		JeepModel model = JeepModel.WRANGLER;
+		String trim = "sport"; 
+		String uri = 
+				String.format("%s?model=%strim=%s", getBaseUri(), model, trim);
+		
+		
+		ResponseEntity<Jeep> response =
+			getRestTemplate().getForEntity(uri, Jeep.class);
+		
+	}
+}

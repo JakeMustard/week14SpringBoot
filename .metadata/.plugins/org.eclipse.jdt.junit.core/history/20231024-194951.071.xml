@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="jeep-sales" project="jeep-sales" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.promineotech.jeep.controller.FetchJeepTest" time="0.393" displayname="FetchJeepTest" uniqueid="[engine:junit-jupiter]/[class:com.promineotech.jeep.controller.FetchJeepTest]">
+    <testcase name="testThatJeepsAreReturnedWhenValidModelAndTrimAreSupplied" classname="com.promineotech.jeep.controller.FetchJeepTest" time="0.393" displayname="testThatJeepsAreReturnedWhenValidModelAndTrimAreSupplied()" uniqueid="[engine:junit-jupiter]/[class:com.promineotech.jeep.controller.FetchJeepTest]/[method:testThatJeepsAreReturnedWhenValidModelAndTrimAreSupplied()]">
+      <error>org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [migrations/V1.0__Jeep_Schema.sql]; nested exception is java.io.FileNotFoundException: class path resource [migrations/V1.0__Jeep_Schema.sql] cannot be opened because it does not exist&#13;
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:239)&#13;
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)&#13;
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)&#13;
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269)&#13;
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$4(SqlScriptsTestExecutionListener.java:279)&#13;
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68)&#13;
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)&#13;
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67)&#13;
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:279)&#13;
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$0(SqlScriptsTestExecutionListener.java:201)&#13;
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)&#13;
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:201)&#13;
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:148)&#13;
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.beforeTestMethod(SqlScriptsTestExecutionListener.java:118)&#13;
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:293)&#13;
+	at org.springframework.test.context.junit.jupiter.SpringExtension.beforeEach(SpringExtension.java:174)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+Caused by: java.io.FileNotFoundException: class path resource [migrations/V1.0__Jeep_Schema.sql] cannot be opened because it does not exist&#13;
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)&#13;
+	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:143)&#13;
+	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328)&#13;
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:236)&#13;
+	... 17 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

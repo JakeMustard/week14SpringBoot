@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="jeep-sales" project="jeep-sales" tests="2" started="2" failures="0" errors="2" ignored="0">
+  <testsuite name="com.promineotech.jeep.controller.FetchJeepTest" time="0.002" displayname="FetchJeepTest" uniqueid="[engine:junit-jupiter]/[class:com.promineotech.jeep.controller.FetchJeepTest]">
+    <testcase name="testThatJeepsAreReturnedWhenValidModelAndTrimAreSupplied" classname="com.promineotech.jeep.controller.FetchJeepTest" time="0.002" displayname="testThatJeepsAreReturnedWhenValidModelAndTrimAreSupplied()" uniqueid="[engine:junit-jupiter]/[class:com.promineotech.jeep.controller.FetchJeepTest]/[method:testThatJeepsAreReturnedWhenValidModelAndTrimAreSupplied()]">
+      <error>java.lang.IllegalStateException: Failed to load ApplicationContext&#13;
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)&#13;
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)&#13;
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)&#13;
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)&#13;
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)&#13;
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)&#13;
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)&#13;
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)&#13;
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)&#13;
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)&#13;
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)&#13;
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)&#13;
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)&#13;
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)&#13;
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'resourceHandlerMapping' threw exception; nested exception is java.lang.NoSuchMethodError: 'io.github.classgraph.ClassGraph io.github.classgraph.ClassGraph.acceptPaths(java.lang.String[])'&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)&#13;
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)&#13;
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)&#13;
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)&#13;
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)&#13;
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)&#13;
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)&#13;
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)&#13;
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)&#13;
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)&#13;
+	... 18 more&#13;
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'resourceHandlerMapping' threw exception; nested exception is java.lang.NoSuchMethodError: 'io.github.classgraph.ClassGraph io.github.classgraph.ClassGraph.acceptPaths(java.lang.String[])'&#13;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)&#13;
+	... 37 more&#13;
+Caused by: java.lang.NoSuchMethodError: 'io.github.classgraph.ClassGraph io.github.classgraph.ClassGraph.acceptPaths(java.lang.String[])'&#13;
+	at org.webjars.WebJarAssetLocator.scanForWebJars(WebJarAssetLocator.java:183)&#13;
+	at org.webjars.WebJarAssetLocator.&lt;init&gt;(WebJarAssetLocator.java:205)&#13;
+	at org.webjars.WebJarAssetLocator.&lt;init&gt;(WebJarAssetLocator.java:189)&#13;
+	at org.springframework.web.servlet.resource.WebJarsResourceResolver.&lt;init&gt;(WebJarsResourceResolver.java:64)&#13;
+	at org.springframework.web.servlet.config.annotation.ResourceChainRegistration.getResourceResolvers(ResourceChainRegistration.java:114)&#13;
+	at org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration.getRequestHandler(ResourceHandlerRegistration.java:215)&#13;
+	at org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry.getRequestHandler(ResourceHandlerRegistry.java:178)&#13;
+	at org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry.getHandlerMapping(ResourceHandlerRegistry.java:168)&#13;
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.resourceHandlerMapping(WebMvcConfigurationSupport.java:599)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)&#13;
+	... 38 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.promineotech.jeep.controller.BasicJeepSalesController" time="0.0" displayname="BasicJeepSalesController" uniqueid="[engine:junit-vintage]/[runner:com.promineotech.jeep.controller.BasicJeepSalesController]">
+    <testcase name="com.promineotech.jeep.controller.BasicJeepSalesController" classname="com.promineotech.jeep.controller.BasicJeepSalesController" time="0.0" displayname="initializationError" uniqueid="[engine:junit-vintage]/[runner:com.promineotech.jeep.controller.BasicJeepSalesController]/[test:initializationError(com.promineotech.jeep.controller.BasicJeepSalesController)]">
+      <error>java.lang.ArrayStoreException: jdk.proxy2.$Proxy39&#13;
+	at java.base/java.lang.reflect.Executable.declaredAnnotations(Executable.java:625)&#13;
+	at java.base/java.lang.reflect.Executable.declaredAnnotations(Executable.java:623)&#13;
+	at java.base/java.lang.reflect.Executable.getAnnotation(Executable.java:591)&#13;
+	at java.base/java.lang.reflect.Method.getAnnotation(Method.java:738)&#13;
+	at java.base/java.lang.reflect.AnnotatedElement.isAnnotationPresent(AnnotatedElement.java:292)&#13;
+	at java.base/java.lang.reflect.AccessibleObject.isAnnotationPresent(AccessibleObject.java:518)&#13;
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)&#13;
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1602)&#13;
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)&#13;
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)&#13;
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)&#13;
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)&#13;
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)&#13;
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)&#13;
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

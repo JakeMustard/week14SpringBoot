@@ -1,0 +1,16 @@
+package com.promineotech.jeep.controller;
+
+
+import java.util.List;
+
+@RestController
+public class BasicJeepSalesController {
+
+	
+@Override
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
