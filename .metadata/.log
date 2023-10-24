@@ -3680,3 +3680,207 @@ Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundExce
 	at org.glassfish.jersey.client.ClientResponse.readEntity(ClientResponse.java:340)
 	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:782)
 	... 15 more
+
+!ENTRY org.eclipse.linuxtools.docker.core 2 0 2023-10-24 21:52:29.871
+!MESSAGE Failed to load list of Docker containers from {0}
+!STACK 0
+org.mandas.docker.client.exceptions.DockerRequestException: Request error: GET http://127.0.0.1:2375/containers/json?all=1: 200
+	at org.mandas.docker.client.DefaultDockerClient.propagate(DefaultDockerClient.java:2589)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2458)
+	at org.mandas.docker.client.DefaultDockerClient.listContainers(DefaultDockerClient.java:412)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.listContainers(DockerConnection.java:780)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.getContainers(DockerConnection.java:665)
+	at org.eclipse.linuxtools.internal.docker.core.DockerContainerRefreshManager$ContainerRefreshThread.run(DockerContainerRefreshManager.java:161)
+Caused by: javax.ws.rs.client.ResponseProcessingException: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:786)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$2(JerseyInvocation.java:687)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:686)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:432)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2456)
+	... 4 more
+Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor.aroundReadFrom(ReaderInterceptorExecutor.java:208)
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor.proceed(ReaderInterceptorExecutor.java:132)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.readFrom(MessageBodyFactory.java:1072)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:919)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:879)
+	at org.glassfish.jersey.client.ClientResponse.readEntity(ClientResponse.java:340)
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:782)
+	... 15 more
+
+!ENTRY org.eclipse.linuxtools.docker.core 2 0 2023-10-24 21:52:46.894
+!MESSAGE Failed to load list of Docker containers from {0}
+!STACK 0
+org.mandas.docker.client.exceptions.DockerRequestException: Request error: GET http://127.0.0.1:2375/containers/json?all=1: 200
+	at org.mandas.docker.client.DefaultDockerClient.propagate(DefaultDockerClient.java:2589)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2458)
+	at org.mandas.docker.client.DefaultDockerClient.listContainers(DefaultDockerClient.java:412)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.listContainers(DockerConnection.java:780)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.getContainers(DockerConnection.java:665)
+	at org.eclipse.linuxtools.internal.docker.core.DockerContainerRefreshManager$ContainerRefreshThread.run(DockerContainerRefreshManager.java:161)
+Caused by: javax.ws.rs.client.ResponseProcessingException: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:786)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$2(JerseyInvocation.java:687)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:686)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:432)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2456)
+	... 4 more
+Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor.aroundReadFrom(ReaderInterceptorExecutor.java:208)
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor.proceed(ReaderInterceptorExecutor.java:132)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.readFrom(MessageBodyFactory.java:1072)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:919)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:879)
+	at org.glassfish.jersey.client.ClientResponse.readEntity(ClientResponse.java:340)
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:782)
+	... 15 more
+
+!ENTRY org.eclipse.linuxtools.docker.core 2 0 2023-10-24 21:53:03.923
+!MESSAGE Failed to load list of Docker containers from {0}
+!STACK 0
+org.mandas.docker.client.exceptions.DockerRequestException: Request error: GET http://127.0.0.1:2375/containers/json?all=1: 200
+	at org.mandas.docker.client.DefaultDockerClient.propagate(DefaultDockerClient.java:2589)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2458)
+	at org.mandas.docker.client.DefaultDockerClient.listContainers(DefaultDockerClient.java:412)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.listContainers(DockerConnection.java:780)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.getContainers(DockerConnection.java:665)
+	at org.eclipse.linuxtools.internal.docker.core.DockerContainerRefreshManager$ContainerRefreshThread.run(DockerContainerRefreshManager.java:161)
+Caused by: javax.ws.rs.client.ResponseProcessingException: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:786)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$2(JerseyInvocation.java:687)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:686)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:432)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2456)
+	... 4 more
+Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor.aroundReadFrom(ReaderInterceptorExecutor.java:208)
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor.proceed(ReaderInterceptorExecutor.java:132)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.readFrom(MessageBodyFactory.java:1072)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:919)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:879)
+	at org.glassfish.jersey.client.ClientResponse.readEntity(ClientResponse.java:340)
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:782)
+	... 15 more
+
+!ENTRY org.eclipse.linuxtools.docker.core 2 0 2023-10-24 21:53:20.945
+!MESSAGE Failed to load list of Docker containers from {0}
+!STACK 0
+org.mandas.docker.client.exceptions.DockerRequestException: Request error: GET http://127.0.0.1:2375/containers/json?all=1: 200
+	at org.mandas.docker.client.DefaultDockerClient.propagate(DefaultDockerClient.java:2589)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2458)
+	at org.mandas.docker.client.DefaultDockerClient.listContainers(DefaultDockerClient.java:412)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.listContainers(DockerConnection.java:780)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.getContainers(DockerConnection.java:665)
+	at org.eclipse.linuxtools.internal.docker.core.DockerContainerRefreshManager$ContainerRefreshThread.run(DockerContainerRefreshManager.java:161)
+Caused by: javax.ws.rs.client.ResponseProcessingException: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:786)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$2(JerseyInvocation.java:687)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:686)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:432)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2456)
+	... 4 more
+Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor.aroundReadFrom(ReaderInterceptorExecutor.java:208)
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor.proceed(ReaderInterceptorExecutor.java:132)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.readFrom(MessageBodyFactory.java:1072)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:919)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:879)
+	at org.glassfish.jersey.client.ClientResponse.readEntity(ClientResponse.java:340)
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:782)
+	... 15 more
+
+!ENTRY org.eclipse.linuxtools.docker.core 2 0 2023-10-24 21:53:37.980
+!MESSAGE Failed to load list of Docker containers from {0}
+!STACK 0
+org.mandas.docker.client.exceptions.DockerRequestException: Request error: GET http://127.0.0.1:2375/containers/json?all=1: 200
+	at org.mandas.docker.client.DefaultDockerClient.propagate(DefaultDockerClient.java:2589)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2458)
+	at org.mandas.docker.client.DefaultDockerClient.listContainers(DefaultDockerClient.java:412)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.listContainers(DockerConnection.java:780)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.getContainers(DockerConnection.java:665)
+	at org.eclipse.linuxtools.internal.docker.core.DockerContainerRefreshManager$ContainerRefreshThread.run(DockerContainerRefreshManager.java:161)
+Caused by: javax.ws.rs.client.ResponseProcessingException: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:786)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$2(JerseyInvocation.java:687)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:686)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:432)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2456)
+	... 4 more
+Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor.aroundReadFrom(ReaderInterceptorExecutor.java:208)
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor.proceed(ReaderInterceptorExecutor.java:132)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.readFrom(MessageBodyFactory.java:1072)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:919)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:879)
+	at org.glassfish.jersey.client.ClientResponse.readEntity(ClientResponse.java:340)
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:782)
+	... 15 more
+
+!ENTRY org.eclipse.linuxtools.docker.core 2 0 2023-10-24 21:53:55.013
+!MESSAGE Failed to load list of Docker containers from {0}
+!STACK 0
+org.mandas.docker.client.exceptions.DockerRequestException: Request error: GET http://127.0.0.1:2375/containers/json?all=1: 200
+	at org.mandas.docker.client.DefaultDockerClient.propagate(DefaultDockerClient.java:2589)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2458)
+	at org.mandas.docker.client.DefaultDockerClient.listContainers(DefaultDockerClient.java:412)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.listContainers(DockerConnection.java:780)
+	at org.eclipse.linuxtools.internal.docker.core.DockerConnection.getContainers(DockerConnection.java:665)
+	at org.eclipse.linuxtools.internal.docker.core.DockerContainerRefreshManager$ContainerRefreshThread.run(DockerContainerRefreshManager.java:161)
+Caused by: javax.ws.rs.client.ResponseProcessingException: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:786)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$2(JerseyInvocation.java:687)
+	at org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:686)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:432)
+	at org.mandas.docker.client.DefaultDockerClient.request(DefaultDockerClient.java:2456)
+	... 4 more
+Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<org.mandas.docker.client.messages.Container>.
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor.aroundReadFrom(ReaderInterceptorExecutor.java:208)
+	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor.proceed(ReaderInterceptorExecutor.java:132)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.readFrom(MessageBodyFactory.java:1072)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:919)
+	at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:879)
+	at org.glassfish.jersey.client.ClientResponse.readEntity(ClientResponse.java:340)
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:782)
+	... 15 more
